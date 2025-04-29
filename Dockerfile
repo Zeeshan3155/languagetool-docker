@@ -1,7 +1,7 @@
-FROM languagetool/languagetool:latest
+FROM ghcr.io/languagetool-org/languagetool:latest
 
-# Render expects your app to listen on port 10000
+# Render expects port 10000
 EXPOSE 10000
 
-# Override the default CMD to run LT on Render’s expected port
+# Override default port (8010) with one Render supports
 CMD ["java", "-cp", "languagetool-server.jar", "org.languagetool.server.HTTPServer", "--port", "10000"]
