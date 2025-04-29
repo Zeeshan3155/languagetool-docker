@@ -1,0 +1,2 @@
+FROM languagetool/languagetool:latest
+EXPOSE 8010
